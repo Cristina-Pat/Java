@@ -17,7 +17,7 @@ public class Example {
     }
     
     /**
-     * Add your method checkIndex below this comment
+     * Check the size of the collection
      */
     public void checkIndex(int index)
     {
@@ -27,5 +27,16 @@ public class Example {
         if(index >= 0 && index >= library.size()){
             System.out.println("The valid index range is 0 to " + (library.size()-1));
              }
+    }
+    /**
+     * Show a list of all the elements in the collection
+     */
+    public void listAllElements()
+    {
+        int position = 1;
+        for(String el:library) {
+            System.out.println(position + ". "+ el);
+            position ++;
+        }
     }
 }
