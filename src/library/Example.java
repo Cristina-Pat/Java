@@ -39,4 +39,15 @@ public class Example {
             position ++;
         }
     }
+    /**
+     * List the name of elements matching the given search string
+     */
+    public void listMaching(String searchString) 
+    {
+    	for(String el:library) {
+    		if(el.contains(searchString)) {
+    			System.out.println(el);
+    		}
+    	}
+    }
 }
