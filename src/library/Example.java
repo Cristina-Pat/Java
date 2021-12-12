@@ -50,4 +50,18 @@ public class Example {
     		}
     	}
     }
+    /**
+     *Calculate a fine for returning a book late.
+	 * 
+	 * @param price The price of book.
+	 * @param numberDays The number of days late.
+	 * 
+	 * @return The fine that the user need to pay.
+	 */
+	public double calculateFine(double price, int numberDays) 
+	{
+		double fine = 0;
+		fine  = (price * 0.02) * numberDays;
+		return fine;
+	}
 }
