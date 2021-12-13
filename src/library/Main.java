@@ -1,6 +1,6 @@
 package library;
 
-public class Library {
+public class Main {
 
 	public static void main(String[] args) {
 		Example e = new Example();
@@ -9,4 +9,5 @@ public class Library {
 		e.checkIndex(5);
 	}
 }
+
 
