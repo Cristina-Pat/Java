@@ -3,10 +3,13 @@ package library;
 public class Main {
 
 	public static void main(String[] args) {
-		Example e = new Example();
-		e.addElement("One");
-		e.addElement("Two");
+		SimpleLibrary e = new SimpleLibrary();
+		e.addLibrary("The Tale of Peter Rabbit");
+		e.addLibrary("Grimm's Fairy Tales");
+		e.addLibrary("A Bear Called Paddington");
 		e.checkIndex(5);
+		e.listAllBooks();
+		e.listMaching("Grimm's Fairy Tales");
 	}
 }
 
