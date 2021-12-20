@@ -48,4 +48,40 @@ public class Book
    {
        return title;
     }
+   
+   /**
+    * Return the availability of a book.
+    * 
+    * @return Book's availability.
+    */
+  public boolean isOnLoan()
+  {
+      return onLoan;
+   }
+  
+   /**
+    * Set whether the book is on loan.
+    * 
+    * @param onLoan The availability of the book. 
+    * 
+    */
+   public void setOnLoan(boolean onLoan) 
+   {
+    this.onLoan = onLoan;
+    }
+    
+   /**
+    * Return a string describing the book and its availability.
+    */
+   public String toString() 
+   {
+	   String availability = " (available)";
+	   if (onLoan == true) {
+		   availability = " (on loan)";
+	   }
+			   
+	   String message = "Title: " + title + "," + " Author: " + author + availability;
+	   return message;  
+	   
+    }
 }
