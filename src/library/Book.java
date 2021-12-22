@@ -84,4 +84,25 @@ public class Book
 	   return message;  
 	   
     }
+  
+   /**
+    * Check the validity of the book's id. 
+    */
+   public boolean verifyId() {
+	  if(id.length() < 7) { // Check the length of the id
+		  return false;
+	  }
+	  int total = 0; 
+	  for(int i = 0; i < id.length(); i++) { // Iterate trough the length of the id
+		  char ch = id.charAt(i); // initialise the ch variable to the character at the current index
+		  int result = ch % 10; // compute modulo 10 and assign to a result variable
+		  total = total + result; // the result is added to total variable
+	  }
+	  int finalResult = total % 7; // compute modulo 7 and assign to a final result variable
+	  if(finalResult != 0) // test final result variable 
+	  {
+		  return false; // if different than 0, the id is not valid
+	  }
+	  return true; // the id is valid
+   }
 }
