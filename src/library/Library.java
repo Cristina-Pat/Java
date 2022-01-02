@@ -46,4 +46,25 @@ public class Library {
 			return fine;
 			
 		}
+		
+		/**
+		 * Show the list of books that the library owns, whose titles match the given parameter.
+		 * 
+		 * @param The title of a book.
+		 * 
+		 * @return The list of books with the same title.
+		 */
+		public ArrayList<Book> getMachingBooks(String title) 
+		{
+			ArrayList<Book> machingList = new ArrayList<Book>();
+			
+			for(Book item:books) 
+			{
+				if(title.equals(item.getTitle())) 
+				{
+					machingList.add(item);
+				}
+			}
+			return machingList;
+		}
 }
