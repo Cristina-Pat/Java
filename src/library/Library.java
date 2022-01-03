@@ -67,4 +67,22 @@ public class Library {
 			}
 			return machingList;
 		}
+
+		/** 
+		 * Check the availability of a book, searching by its title
+		 * 
+		 * @return Returns true if the parameter’s title matches that of any book in the collection 
+		 * and the book is not on loan
+		 */
+		public boolean isAvailable(Book book)  
+		{
+			for(Book item:books) 
+			{
+				if(book.getTitle().equals(item.getTitle()) && item.isOnLoan() != true) 
+				{
+					return true;
+				}
+			}
+			return false;
+		}
 }
