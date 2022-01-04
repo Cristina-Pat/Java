@@ -85,4 +85,16 @@ public class Library {
 			}
 			return false;
 		}
+		
+		/**
+		 * Show a list of all the books in the library
+		 */
+		public void listAllBooks()
+	    {
+	        int position = 1;
+	        for(Book item:books) {
+	            System.out.println(position + ". "+ item);
+	            position ++;
+	        }
+	    }
 }
