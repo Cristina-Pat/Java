@@ -97,4 +97,21 @@ public class Library {
 	            position ++;
 	        }
 	    }
+		
+		/**
+		 * Find the first book in the library that matches the parameter by id, and set
+		 * it as loaned.
+		 */
+		public void loanBook(Book book) 
+		{
+			for(Book item:books) 
+			{
+				if(item.getId().equals(book.getId())) 
+				{
+					item.setOnLoan(true);
+					return; // the method execution is stopped after the first book was found
+				}
+			}
+				
+		}
 }

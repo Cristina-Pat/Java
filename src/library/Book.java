@@ -49,6 +49,11 @@ public class Book
        return title;
     }
    
+   public String getId()
+   {
+       return id;
+    }
+   
    /**
     * Return the availability of a book.
     * 
