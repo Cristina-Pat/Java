@@ -1,5 +1,6 @@
 package library;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 public class Library {
@@ -113,5 +114,25 @@ public class Library {
 				}
 			}
 				
+		}
+
+		/**
+		 * Remove the first book with a matching id from the collection
+		 */
+		public void removeBook(Book book) 
+		{
+			Iterator<Book> it = books.iterator(); // initialise iterator
+			while(it.hasNext()) //check whether there are more elements in collection
+			{
+				Book currentBook = it.next(); // get the next element
+				
+				// check whether the id of the element matches with that of the parameter			
+				if(currentBook.getId().equals(book.getId())) 
+				{
+					it.remove(); // remove the book
+					return; // the method execution is stopped after the first book was found
+				} 
+			}
+			System.out.println("Book not found."); //print message if there in no book with a matching id
 		}
 }
